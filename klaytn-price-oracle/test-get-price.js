@@ -13,6 +13,7 @@ const priceOracleContract = new caver.klay.Contract(
   KlaytnPriceOracle.abi,
   contractAddress
 );
+
 priceOracleContract.methods
   .prices('BTC')
   .call()
@@ -23,8 +24,3 @@ priceOracleContract.methods
   .call()
   .then((value) => console.log(`lastModifiedAccount: ${value}`));
 
-//   console.log(
-
-// priceOracleContract.methods
-//   .prices('ETH')
-//   )
